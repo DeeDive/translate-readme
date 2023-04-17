@@ -2,8 +2,8 @@
 
 **Test Table of Contents**
 
-- [Configuration](#Configuration)
-  - [Options](#Options)
+- [Configuration](#configuration)
+  - [Options](#options)
   
   
 ## README Translation
