@@ -2,8 +2,8 @@
 
 **सामग्री की परीक्षण तालिका**
 
--   [विन्यास](#%E0%A4%B5%E0%A4%BF%E0%A4%A8%E0%A5%8D%E0%A4%AF%E0%A4%BE%E0%A4%B8)
-    -   [विकल्प](#%E0%A4%B5%E0%A4%BF%E0%A4%95%E0%A4%B2%E0%A5%8D%E0%A4%AA)
+-   [Configuration](#configuration)
+    -   [Options](#options)
 
 ## रीडमे अनुवाद
 
