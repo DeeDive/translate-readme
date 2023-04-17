@@ -70,7 +70,7 @@ jobs:
 
 ## 支持的语言
 
-可在此处找到支持的语言[HTTPS://cloud.Google.com/translate/docs/languages](https://cloud.google.com/translate/docs/languages)
+可在此处找到支持的语言<https://cloud.google.com/translate/docs/languages>
 
 ### 问题
 

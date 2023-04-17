@@ -26,9 +26,26 @@ const readme = readFileSync(join(mainDir, README), { encoding: "utf8" });
 const readmeAST = toAst(readme);
 console.log("AST CREATED AND READ");
 
+const urlRegex = /https?:\/\/[^\s]+/g;
+
 async function translateNodes(node) {
   if (node.type === "text") {
-    node.value = (await $(node.value, { to: lang })).text;
+    const segments = node.value.split(urlRegex);
+    const urls = Array.from(node.value.matchAll(urlRegex));
+
+    let translatedText = "";
+    let urlIndex = 0;
+    for (const segment of segments) {
+      const translatedSegment = (await $(segment, { to: lang })).text;
+      translatedText += translatedSegment;
+
+      if (urlIndex < urls.length) {
+        translatedText += urls[urlIndex][0];
+        urlIndex++;
+      }
+    }
+
+    node.value = translatedText;
   }
 
   if (node.children) {
@@ -37,6 +54,7 @@ async function translateNodes(node) {
     }
   }
 }
+
 
 async function writeToFile() {
   await translateNodes(readmeAST);
