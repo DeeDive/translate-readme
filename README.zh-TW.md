@@ -1,5 +1,10 @@
 # 翻譯自述文件操作
 
+**測試目錄**
+
+-   [配置](#Configuration)
+    -   [選項](#Options)
+
 ## 自述文件翻譯
 
 -   [英語](README.md)
@@ -13,7 +18,7 @@
 
 這是一個 GitHub Action，可以自動將你的 repo 中的自述文件翻譯成指定的語言。
 
-_提交的[DEV：GitHub 開源行動！](https://dev.to/devteam/announcing-the-github-actions-hackathon-on-dev-3ljn)黑客馬拉松_
+_提交的[DEV：GitHub 開源行動！](https://dev.to/devteam/announcing-the-github-actions-hackathon-on-dev-3ljn)編程馬拉松_
 
 ## 設置
 
