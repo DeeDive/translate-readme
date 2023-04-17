@@ -1,5 +1,10 @@
 # Traduire l'action Lisez-moi
 
+**Table des matières de l'essai**
+
+-   [Configuration](#Configuration)
+    -   [Choix](#Options)
+
 ## Traduction LISEZMOI
 
 -   [Anglais](README.md)
