@@ -1,4 +1,4 @@
-# 翻譯自述文件操作
+# 翻譯自述文件和目錄 URL - 操作
 
 **測試目錄**
 
@@ -18,7 +18,7 @@
 
 這是一個 GitHub Action，可以自動將你的 repo 中的自述文件翻譯成指定的語言。
 
-_提交的[DEV：GitHub 開源行動！](https://dev.to/devteam/announcing-the-github-actions-hackathon-on-dev-3ljn)編程馬拉松_
+_提交的[DEV：GitHub 開源行動！](https://dev.to/devteam/announcing-the-github-actions-hackathon-on-dev-3ljn)黑客馬拉松_
 
 ## 設置
 
