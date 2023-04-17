@@ -1,6 +1,6 @@
 # 翻譯自述文件和目錄 URL - 操作
 
-**測試目錄**
+**測試目錄翻譯**
 
 -   [Configuration](#configuration)
     -   [Options](#options)
