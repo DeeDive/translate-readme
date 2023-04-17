@@ -54,11 +54,13 @@ async function translateNodes(node, parent, headingTranslations) {
       translated: translatedTitle,
     });
   } else if (node.type === "link" && parent.type === "listItem") {
-    const linkIndex = parent.children.indexOf(node);
-    if (headingTranslations[linkIndex]) {
+    const matchingHeading = headingTranslations.find((headingTranslation) =>
+      new RegExp(headingTranslation.original, "g").test(node.url)
+    );
+    if (matchingHeading) {
       node.url = node.url.replace(
-        new RegExp(headingTranslations[linkIndex].original, "g"),
-        headingTranslations[linkIndex].translated
+        new RegExp(matchingHeading.original, "g"),
+        encodeURIComponent(matchingHeading.translated)
       );
     }
   }
