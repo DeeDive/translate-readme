@@ -5,7 +5,7 @@ const $ = require("@k3rn31p4nic/google-translate-api");
 const unified = require("unified");
 const parse = require("remark-parse");
 const stringify = require("remark-stringify");
-const visitParents = require("unist-util-visit-parents");
+const visit = require("unist-util-visit");
 const simpleGit = require("simple-git");
 const git = simpleGit();
 
@@ -26,20 +26,20 @@ const readme = readFileSync(join(mainDir, README), { encoding: "utf8" });
 const readmeAST = toAst(readme);
 console.log("AST CREATED AND READ");
 
-async function processNodes() {
-  return new Promise((resolve) => {
-    visitParents(readmeAST, 'text', async (node, ancestors) => {
-      const parent = ancestors[ancestors.length - 1];
-      
-      if (parent.type !== "link") {
-        node.value = (await $(node.value, { to: lang })).text;
-      }
-    }, resolve);
-  });
+async function translateNodes(node) {
+  if (node.type === "text") {
+    node.value = (await $(node.value, { to: lang })).text;
+  }
+
+  if (node.children) {
+    for (const child of node.children) {
+      await translateNodes(child);
+    }
+  }
 }
 
 async function writeToFile() {
-  await processNodes();
+  await translateNodes(readmeAST);
   writeFileSync(
     join(mainDir, `README.${lang}.md`),
     toMarkdown(readmeAST),

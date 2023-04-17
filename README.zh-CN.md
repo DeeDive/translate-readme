@@ -63,14 +63,14 @@ jobs:
 
 ### 选项
 
-You can configure the action further with the following options:
+您可以使用以下选项进一步配置操作：
 
 -   `LANG`：您要将自述文件翻译成的语言。默认为简体中文。 （我是加纳人）可在下方找到支持的语言。
     （默认：`zh-CH`） （必需的：`false`)
 
 ## 支持的语言
 
-可在此处找到支持的语言<https://cloud.google.com/translate/docs/languages>
+可在此处找到支持的语言[HTTPS://cloud.Google.com/translate/docs/languages](https://cloud.google.com/translate/docs/languages)
 
 ### 问题
 
