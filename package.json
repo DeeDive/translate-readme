@@ -16,6 +16,7 @@
   "license": "ISC",
   "dependencies": {
     "@actions/core": "^1.2.6",
+    "@k3rn31p4nic/google-translate-api": "file:../../../../Downloads/google-translate-1.1.1",
     "@kwsites/promise-deferred": "^1.1.1",
     "http-proxy-agent": "^4.0.1",
     "k3rn31p4nic/google-translate-api": "^1.1.1",

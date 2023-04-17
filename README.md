@@ -1,6 +1,11 @@
 # Translate Readme Action
 
+**Test Table of Contents**
 
+- [Configuration](#Configuration)
+  - [Options](#Options)
+  
+  
 ## README Translation
 - [English](README.md)
 - [简体中文](README.zh-CN.md)
