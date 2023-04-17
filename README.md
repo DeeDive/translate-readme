@@ -1,6 +1,6 @@
 # Translate Readme and TOC URLs - Action
 
-**Test Table of Contents**
+**Test Table of Contents Translation**
 
 - [Configuration](#configuration)
   - [Options](#options)
