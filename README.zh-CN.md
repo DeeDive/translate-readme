@@ -2,8 +2,8 @@
 
 **测试目录**
 
--   [配置](#%E9%85%8D%E7%BD%AE)
-    -   [选项](#%E9%80%89%E9%A1%B9)
+-   [Configuration](#configuration)
+    -   [Options](#options)
 
 ## 自述文件翻译
 
