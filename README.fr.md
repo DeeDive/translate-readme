@@ -2,7 +2,7 @@
 
 ## Traduction LISEZMOI
 
--   [English](README.md)
+-   [Anglais](README.md)
 -   [Chinois simplifié](README.zh-CN.md)
 -   [chinois traditionnel](README.zh-TW.md)
 -   [hindi](README.hi.md)
