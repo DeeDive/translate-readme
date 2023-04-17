@@ -1,4 +1,4 @@
-# Translate Readme Action
+# Translate Readme and TOC URLs - Action
 
 **Test Table of Contents**
 
