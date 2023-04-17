@@ -24889,10 +24889,10 @@ async function translateNodes(node, parent, headingTranslations) {
   } else if (node.type === "text" && parent.type === "heading") {
     const translatedTitle = (await $(node.value, { to: lang })).text;
     node.value = translatedTitle;
-    headingTranslations[parent.children.indexOf(node)] = {
+    headingTranslations.push({
       original: node.value,
       translated: translatedTitle,
-    };
+    });
   } else if (node.type === "link" && parent.type === "listItem") {
     const linkIndex = parent.children.indexOf(node);
     if (headingTranslations[linkIndex]) {
@@ -24910,10 +24910,8 @@ async function translateNodes(node, parent, headingTranslations) {
   }
 }
 
-
-
 async function writeToFile() {
-  await translateNodes(readmeAST);
+  await translateNodes(readmeAST, null, []);
   writeFileSync(
     join(mainDir, `README.${lang}.md`),
     toMarkdown(readmeAST),
@@ -24931,7 +24929,7 @@ async function commitChanges(lang) {
     "41898282+github-actions[bot]@users.noreply.github.com"
   );
   await git.commit(
-    `docs: Added README."${lang}".md translation via (mod) https://github.com/dephraiim/translate-readme`
+    `docs: Added README."${lang}".md translation via https://github.com/dephraiim/translate-readme`
   );
   console.log("finished commit");
   await git.push();
