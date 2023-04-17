@@ -2,8 +2,8 @@
 
 **測試目錄**
 
--   [配置](#%E9%85%8D%E7%BD%AE)
-    -   [選項](#%E9%81%B8%E9%A0%85)
+-   [Configuration](#configuration)
+    -   [Options](#options)
 
 ## 自述文件翻譯
 
