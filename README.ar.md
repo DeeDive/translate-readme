@@ -70,7 +70,7 @@ jobs:
 
 ## اللغات المعتمدة
 
-يمكن العثور على اللغات المدعومة هنا[هتبص://كلود.جوجل.كوم/ترانسلت/دكس/لانججص](https://cloud.google.com/translate/docs/languages)
+يمكن العثور على اللغات المدعومة هنا<https://cloud.google.com/translate/docs/languages>
 
 ### مشاكل
 
