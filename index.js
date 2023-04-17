@@ -5,7 +5,7 @@ const $ = require("@k3rn31p4nic/google-translate-api");
 const unified = require("unified");
 const parse = require("remark-parse");
 const stringify = require("remark-stringify");
-const visit = require("unist-util-visit");
+const visitParents = require("unist-util-visit-parents");
 const simpleGit = require("simple-git");
 const git = simpleGit();
 
@@ -26,22 +26,20 @@ const readme = readFileSync(join(mainDir, README), { encoding: "utf8" });
 const readmeAST = toAst(readme);
 console.log("AST CREATED AND READ");
 
-let originalText = [];
-
-visit(readmeAST, async (node, index, parent) => {
-  if (node.type === "text" && parent.type !== "link") {
-    originalText.push(node.value);
-    node.value = (await $(node.value, { to: lang })).text;
-  }
-});
-
-
-const translatedText = originalText.map(async (text) => {
-  return (await $(text, { to: lang })).text;
-});
+async function processNodes() {
+  return new Promise((resolve) => {
+    visitParents(readmeAST, 'text', async (node, ancestors) => {
+      const parent = ancestors[ancestors.length - 1];
+      
+      if (parent.type !== "link") {
+        node.value = (await $(node.value, { to: lang })).text;
+      }
+    }, resolve);
+  });
+}
 
 async function writeToFile() {
-  await Promise.all(translatedText);
+  await processNodes();
   writeFileSync(
     join(mainDir, `README.${lang}.md`),
     toMarkdown(readmeAST),
@@ -59,7 +57,7 @@ async function commitChanges(lang) {
     "41898282+github-actions[bot]@users.noreply.github.com"
   );
   await git.commit(
-    `docs: Added README."${lang}".md translation via (modified) https://github.com/dephraiim/translate-readme`
+    `docs: Added README."${lang}".md translation via (mod) https://github.com/dephraiim/translate-readme`
   );
   console.log("finished commit");
   await git.push();
