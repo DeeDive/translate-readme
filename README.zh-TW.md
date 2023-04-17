@@ -18,7 +18,7 @@
 
 這是一個 GitHub Action，可以自動將你的 repo 中的自述文件翻譯成指定的語言。
 
-_提交的[DEV: GitHub Actions For Open Source!](https://dev.to/devteam/announcing-the-github-actions-hackathon-on-dev-3ljn)黑客馬拉松_
+_提交的[DEV: GitHub Actions For Open Source!](https://dev.to/devteam/announcing-the-github-actions-hackathon-on-dev-3ljn)編程馬拉松_
 
 ## 設置
 
