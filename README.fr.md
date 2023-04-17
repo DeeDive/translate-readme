@@ -1,6 +1,6 @@
 # Traduire les URL Readme et TOC - Action
 
-**Table des matières de l'essai**
+**Tester la traduction de la table des matières**
 
 -   [Configuration](#configuration)
     -   [Options](#options)
