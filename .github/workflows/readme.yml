@@ -21,18 +21,18 @@ jobs:
         with:
           LANG: zh-CN
       - name: Adding README - Chinese Traditional
-        uses: DeeDive/translate-readme@main
+        uses: DeeDive/translate-readme@1.1.0
         with:
           LANG: zh-TW
       - name: Adding README - Hindi
-        uses: DeeDive/translate-readme@main
+        uses: DeeDive/translate-readme@1.1.0
         with:
           LANG: hi
       - name: Adding README - Arabic
-        uses: DeeDive/translate-readme@main
+        uses: DeeDive/translate-readme@1.1.0
         with:
           LANG: ar
       - name: Adding README - French
-        uses: DeeDive/translate-readme@main
+        uses: DeeDive/translate-readme@1.1.0
         with:
           LANG: fr
