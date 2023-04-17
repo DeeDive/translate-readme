@@ -3,22 +3,22 @@
 **Table des matières de l'essai**
 
 -   [Configuration](#Configuration)
-    -   [Choix](#Options)
+    -   [Choix](#Choix)
 
 ## Traduction LISEZMOI
 
--   [Anglais](README.md)
--   [Chinois simplifié](README.zh-CN.md)
--   [chinois traditionnel](README.zh-TW.md)
--   [hindi](README.hi.md)
+-   [English](README.md)
+-   [简体中文](README.zh-CN.md)
+-   [繁体中文](README.zh-TW.md)
+-   [हिंदी](README.hi.md)
 -   [Française](README.fr.md)
--   [arabe](README.ar.md)
+-   [عربى](README.ar.md)
 
 **GitHub Action pour traduire Readme dans n'importe quelle langue**
 
 Il s'agit d'une action GitHub qui traduit automatiquement le fichier readme de votre référentiel dans une langue spécifiée.
 
-_Une soumission pour le[DEV : Actions GitHub pour l'Open Source !](https://dev.to/devteam/announcing-the-github-actions-hackathon-on-dev-3ljn)hackathon_
+_Une soumission pour le[DEV: GitHub Actions For Open Source!](https://dev.to/devteam/announcing-the-github-actions-hackathon-on-dev-3ljn)hackathon_
 
 ## Installation
 
@@ -77,9 +77,9 @@ Vous pouvez configurer davantage l'action avec les options suivantes :
 
 Les langues prises en charge peuvent être trouvées ici<https://cloud.google.com/translate/docs/languages>
 
-### Questions
+### Des questions
 
-Vérifier[ici](https://github.com/dephraiim/translate-readme/issues/1)pour les problèmes liés à cette action.
+Vérifier[here](https://github.com/dephraiim/translate-readme/issues/1)pour les problèmes liés à cette action.
 
 ### Développement
 
@@ -87,4 +87,4 @@ Les suggestions et contributions sont toujours les bienvenues !
 
 ### LICENCE
 
-[AVEC](./LICENSE)
+[MIT](./LICENSE)
