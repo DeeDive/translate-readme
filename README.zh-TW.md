@@ -2,23 +2,23 @@
 
 **測試目錄**
 
--   [配置](#Configuration)
-    -   [選項](#Options)
+-   [配置](#%E9%85%8D%E7%BD%AE)
+    -   [選項](#%E9%81%B8%E9%A0%85)
 
 ## 自述文件翻譯
 
--   [英語](README.md)
--   [簡體中文](README.zh-CN.md)
--   [繁體中文](README.zh-TW.md)
--   [印地語](README.hi.md)
--   [法語](README.fr.md)
--   [阿拉伯](README.ar.md)
+-   [English](README.md)
+-   [简体中文](README.zh-CN.md)
+-   [繁体中文](README.zh-TW.md)
+-   [हिंदी](README.hi.md)
+-   [Française](README.fr.md)
+-   [عربى](README.ar.md)
 
 **GitHub Action 將自述文件翻譯成任何語言**
 
 這是一個 GitHub Action，可以自動將你的 repo 中的自述文件翻譯成指定的語言。
 
-_提交的[DEV：GitHub 開源行動！](https://dev.to/devteam/announcing-the-github-actions-hackathon-on-dev-3ljn)黑客馬拉松_
+_提交的[DEV: GitHub Actions For Open Source!](https://dev.to/devteam/announcing-the-github-actions-hackathon-on-dev-3ljn)黑客馬拉松_
 
 ## 設置
 
@@ -79,7 +79,7 @@ jobs:
 
 ### 問題
 
-查看[這裡](https://github.com/dephraiim/translate-readme/issues/1)與此操作相關的問題。
+查看[here](https://github.com/dephraiim/translate-readme/issues/1)與此操作相關的問題。
 
 ### 發展
 
@@ -87,4 +87,4 @@ jobs:
 
 ### 執照
 
-[和](./LICENSE)
+[MIT](./LICENSE)

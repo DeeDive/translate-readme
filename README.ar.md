@@ -2,23 +2,23 @@
 
 **اختبار جدول المحتويات**
 
--   [إعدادات](#Configuration)
-    -   [خيارات](#Options)
+-   [إعدادات](#%D8%A5%D8%B9%D8%AF%D8%A7%D8%AF%D8%A7%D8%AA)
+    -   [خيارات](#%D8%AE%D9%8A%D8%A7%D8%B1%D8%A7%D8%AA)
 
 ## README الترجمة
 
--   [إنجليزي](README.md)
--   [الصينية المبسطة](README.zh-CN.md)
--   [الصينية التقليدية](README.zh-TW.md)
--   [هندي](README.hi.md)
--   [فرنسي](README.fr.md)
+-   [English](README.md)
+-   [简体中文](README.zh-CN.md)
+-   [繁体中文](README.zh-TW.md)
+-   [हिंदी](README.hi.md)
+-   [Française](README.fr.md)
 -   [عربى](README.ar.md)
 
 **GitHub Action لترجمة الملف التمهيدي إلى أي لغة**
 
 هذا إجراء GitHub يقوم تلقائيًا بترجمة الملف التمهيدي في الريبو الخاص بك إلى لغة محددة.
 
-_تقديم ل[DEV: إجراءات جيثب للمصدر المفتوح!](https://dev.to/devteam/announcing-the-github-actions-hackathon-on-dev-3ljn)هاكاثون_
+_تقديم ل[DEV: GitHub Actions For Open Source!](https://dev.to/devteam/announcing-the-github-actions-hackathon-on-dev-3ljn)هاكاثون_
 
 ## يثبت
 
@@ -79,7 +79,7 @@ jobs:
 
 ### مشاكل
 
-يفحص[هنا](https://github.com/dephraiim/translate-readme/issues/1)للقضايا المتعلقة بهذا الإجراء.
+يفحص[here](https://github.com/dephraiim/translate-readme/issues/1)للقضايا المتعلقة بهذا الإجراء.
 
 ### تطوير
 
@@ -87,4 +87,4 @@ jobs:
 
 ### رخصة
 
-[مع](./LICENSE)
+[MIT](./LICENSE)
