@@ -2,8 +2,8 @@
 
 **Table des matières de l'essai**
 
--   [Configuration](#Configuration)
-    -   [Choix](#Choix)
+-   [Configuration](#configuration)
+    -   [Options](#options)
 
 ## Traduction LISEZMOI
 
