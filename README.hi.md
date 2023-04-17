@@ -2,23 +2,23 @@
 
 **सामग्री की परीक्षण तालिका**
 
--   [विन्यास](#Configuration)
-    -   [विकल्प](#Options)
+-   [विन्यास](#%E0%A4%B5%E0%A4%BF%E0%A4%A8%E0%A5%8D%E0%A4%AF%E0%A4%BE%E0%A4%B8)
+    -   [विकल्प](#%E0%A4%B5%E0%A4%BF%E0%A4%95%E0%A4%B2%E0%A5%8D%E0%A4%AA)
 
 ## रीडमे अनुवाद
 
--   [अंग्रेज़ी](README.md)
--   [सरलीकृत चीनी](README.zh-CN.md)
--   [परंपरागत चीनी](README.zh-TW.md)
+-   [English](README.md)
+-   [简体中文](README.zh-CN.md)
+-   [繁体中文](README.zh-TW.md)
 -   [हिंदी](README.hi.md)
--   [फ्रेंच](README.fr.md)
--   [अरब](README.ar.md)
+-   [Française](README.fr.md)
+-   [عربى](README.ar.md)
 
 **रीडमी का किसी भी भाषा में अनुवाद करने के लिए गिटहब एक्शन**
 
 यह एक गिटहब एक्शन है जो आपके रेपो में रीडमी को एक निर्दिष्ट भाषा में स्वचालित रूप से अनुवादित करता है।
 
-_के लिए एक सबमिशन[DEV: ओपन सोर्स के लिए गिटहब एक्शन!](https://dev.to/devteam/announcing-the-github-actions-hackathon-on-dev-3ljn)आयोजित हैकथॉन_
+_के लिए एक सबमिशन[DEV: GitHub Actions For Open Source!](https://dev.to/devteam/announcing-the-github-actions-hackathon-on-dev-3ljn)आयोजित हैकथॉन_
 
 ## स्थापित करना
 
@@ -79,7 +79,7 @@ jobs:
 
 ### समस्याएँ
 
-जाँच करना[यहाँ](https://github.com/dephraiim/translate-readme/issues/1)इस कार्रवाई से संबंधित मुद्दों के लिए।
+जाँच करना[here](https://github.com/dephraiim/translate-readme/issues/1)इस कार्रवाई से संबंधित मुद्दों के लिए।
 
 ### विकास
 
@@ -87,4 +87,4 @@ jobs:
 
 ### लाइसेंस
 
-[साथ](./LICENSE)
+[MIT](./LICENSE)
