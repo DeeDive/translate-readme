@@ -2,8 +2,8 @@
 
 **اختبار جدول المحتويات**
 
--   [إعدادات](#%D8%A5%D8%B9%D8%AF%D8%A7%D8%AF%D8%A7%D8%AA)
-    -   [خيارات](#%D8%AE%D9%8A%D8%A7%D8%B1%D8%A7%D8%AA)
+-   [Configuration](#configuration)
+    -   [Options](#options)
 
 ## README الترجمة
 
