@@ -24866,41 +24866,18 @@ const readme = readFileSync(join(mainDir, README), { encoding: "utf8" });
 const readmeAST = toAst(readme);
 console.log("AST CREATED AND READ");
 
-const urlRegex = /https?:\/\/[^\s]+/g;
-
 async function translateNodes(node, parent, headingTranslations) {
-  if (node.type === "text" && parent.type !== "heading") {
-    const segments = node.value.split(urlRegex);
-    const urls = Array.from(node.value.matchAll(urlRegex));
+  if (node.type === "text" && parent && parent.type !== "link") {
+    node.value = (await $(node.value, { to: lang })).text;
+  }
 
-    let translatedText = "";
-    let urlIndex = 0;
-    for (const segment of segments) {
-      const translatedSegment = (await $(segment, { to: lang })).text;
-      translatedText += translatedSegment;
-
-      if (urlIndex < urls.length) {
-        translatedText += urls[urlIndex][0];
-        urlIndex++;
-      }
-    }
-
-    node.value = translatedText;
-  } else if (node.type === "text" && parent.type === "heading") {
-    const translatedTitle = (await $(node.value, { to: lang })).text;
-    node.value = translatedTitle;
+  if (node.type === "heading" && node.children && node.children.length > 0) {
+    const originalText = node.children[0].value;
+    node.children[0].value = (await $(originalText, { to: lang })).text;
     headingTranslations.push({
-      original: node.value,
-      translated: translatedTitle,
+      original: originalText,
+      translated: node.children[0].value,
     });
-  } else if (node.type === "link" && parent.type === "listItem") {
-    const linkIndex = parent.children.indexOf(node);
-    if (headingTranslations[linkIndex]) {
-      node.url = node.url.replace(
-        new RegExp(headingTranslations[linkIndex].original, "g"),
-        headingTranslations[linkIndex].translated
-      );
-    }
   }
 
   if (node.children) {
@@ -24910,8 +24887,28 @@ async function translateNodes(node, parent, headingTranslations) {
   }
 }
 
+function updateLinks(node, headingTranslations) {
+  if (node.type === "link") {
+    const matchingHeading = headingTranslations.find((headingTranslation) =>
+      new RegExp("#" + encodeURIComponent(headingTranslation.original), "g").test(node.url)
+    );
+    if (matchingHeading) {
+      node.url = node.url.replace(
+        new RegExp("#" + encodeURIComponent(matchingHeading.original), "g"),
+        "#" + encodeURIComponent(matchingHeading.translated)
+      );
+      node.children[0].value = matchingHeading.translated;
+    }
+  }
+
+  if (node.children) {
+    for (const child of node.children) {
+      updateLinks(child, headingTranslations);
+    }
+  }
+}
+
 async function writeToFile() {
-  await translateNodes(readmeAST, null, []);
   writeFileSync(
     join(mainDir, `README.${lang}.md`),
     toMarkdown(readmeAST),
@@ -24936,8 +24933,12 @@ async function commitChanges(lang) {
   console.log("pushed");
 }
 
+
 async function translateReadme() {
   try {
+    const headingTranslations = [];
+    await translateNodes(readmeAST, null, headingTranslations);
+    updateLinks(readmeAST, headingTranslations);
     await writeToFile();
     await commitChanges(lang);
     console.log("Done");
@@ -24945,6 +24946,7 @@ async function translateReadme() {
     throw new Error(error);
   }
 }
+
 
 translateReadme();
 
