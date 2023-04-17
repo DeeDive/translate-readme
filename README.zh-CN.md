@@ -13,7 +13,7 @@
 
 这是一个 GitHub Action，可以自动将你的 repo 中的自述文件翻译成指定的语言。
 
-_提交的[DEV：GitHub 开源行动！](https://dev.to/devteam/announcing-the-github-actions-hackathon-on-dev-3ljn)编程马拉松_
+_提交的[DEV：GitHub 开源行动！](https://dev.to/devteam/announcing-the-github-actions-hackathon-on-dev-3ljn)黑客马拉松_
 
 ## 设置
 
@@ -63,14 +63,14 @@ jobs:
 
 ### 选项
 
-您可以使用以下选项进一步配置操作：
+You can configure the action further with the following options:
 
 -   `LANG`：您要将自述文件翻译成的语言。默认为简体中文。 （我是加纳人）可在下方找到支持的语言。
     （默认：`zh-CH`） （必需的：`false`)
 
 ## 支持的语言
 
-可在此处找到支持的语言[HTTPS://cloud.Google.com/translate/docs/languages](https://cloud.google.com/translate/docs/languages)
+可在此处找到支持的语言<https://cloud.google.com/translate/docs/languages>
 
 ### 问题
 
