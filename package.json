@@ -12,7 +12,7 @@
     "translate",
     "translator"
   ],
-  "author": "Ephraim Atta-Duncan",
+  "author": "Ephraim Atta-Duncan, Yongqiang Dou",
   "license": "ISC",
   "dependencies": {
     "@actions/core": "^1.2.6",
