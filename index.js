@@ -28,12 +28,13 @@ console.log("AST CREATED AND READ");
 
 let originalText = [];
 
-visit(readmeAST, async (node) => {
-  if (node.type === "text") {
+visit(readmeAST, async (node, index, parent) => {
+  if (node.type === "text" && parent.type !== "link") {
     originalText.push(node.value);
     node.value = (await $(node.value, { to: lang })).text;
   }
 });
+
 
 const translatedText = originalText.map(async (text) => {
   return (await $(text, { to: lang })).text;
